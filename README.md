@@ -1,2 +1,2 @@
 # discordjs-st
-A discord bot written in nodeJS
+A discord bot written in nodeJS.

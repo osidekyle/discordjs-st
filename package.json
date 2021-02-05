@@ -1,0 +1,23 @@
+{
+  "name": "discordjs-st",
+  "version": "1.0.0",
+  "description": "A discord bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osidekyle/discordjs-st.git"
+  },
+  "author": "Kyle Hawkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osidekyle/discordjs-st/issues"
+  },
+  "homepage": "https://github.com/osidekyle/discordjs-st#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "nodemon": "^2.0.7"
+  }
+}
