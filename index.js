@@ -48,19 +48,22 @@ if(message.content.startsWith("-play")){
         return response.json()
     })
     .then(function(parsedResponse){
-        console.log(parsedResponse)
+        console.log(parsedResponse.items[0].id.videoId)
+        client.channels.cache.find(function(channel){
+            return channel.type=="voice" && channel.name=="General"
+        }).join().then(
+            function(connection){
+                message.channel.send("Someone added to the voice channel")
+                connection.play(ytdl(`https://www.youtube.com/watch?v=${parsedResponse.items[0].id.videoId}`,{filter:"audioonly"}))
+            }
+        )
+
+        
     })
 
 
 
-    client.channels.cache.find(function(channel){
-        return channel.type=="voice" && channel.name=="General"
-    }).join().then(
-        function(connection){
-            message.channel.send("Someone added to the voice channel")
-            connection.play(ytdl("https://www.youtube.com/watch?v=811QZGDysx0",{filter:"audioonly"}))
-        }
-    )
+   
     
 }
 
